@@ -3,10 +3,10 @@
 
 int main()
 {
-    //inizializzo i valori D N e L sono i numeri inseriti da tastiera, Pi è il pigreco
+    //Dichiarazione dei valori D N e L sono i numeri inseriti da tastiera, Pi è il pigreco
     float D, N, L;
    
-    //questo per far inserire in input il primo numero che sarebbe D e lo utlizzeremo per calcolare le aree delle figure
+    //inserimento in input del primo numero che sarebbe D e lo utlizzeremo per calcolare le aree delle figure
     printf("\nInserisci un numero: ");
     scanf("%f", &D);
 
@@ -24,7 +24,7 @@ int main()
     scanf("%f", &N);
     scanf("%f", &L);
 
-    //calcolo della media
+    //calcolo della media e stampa il risultato sia decimale che arrotondato
     printf("\nMedia dei 3 numeri inseriti: %.2f", media=(D + N + L)/3);
     printf("\nMedia non decimale: %.0f", media);
 
