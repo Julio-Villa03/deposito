@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recon-ng Reconnaissance Report</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function showhide(id) {
+    obj = document.getElementById(id);
+    hide = document.getElementById("hide-" + id);
+    show = document.getElementById("show-" + id);
+    if (obj.style.display == "none") {
+        show.removeAttribute('style');
+        hide.removeAttribute('style');
+        obj.removeAttribute('style');
+    } else {
+        obj.style.display = "none";
+        hide.style.display = "none";
+        show.style.display = "inline";
+    }
+}
+function start() {
+    tables = document.getElementsByName("table");
+    for (i = 0; i < tables.length; ++i) {
+        showhide(tables[i].id);
+    }
+}
+</script>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+}
+.main {
+    width: 1000px;
+    padding: 0 10px;
+    /*text-align: center;*//*centers all the elements on the page*/
+    display: table;
+    margin: 0 auto;
+    border: 2px solid gray;
+    position: relative;
+}
+.title {
+    font-size: 3em;
+}
+.subtitle {
+    font-size: 2em;
+}
+.link {
+    font-size: 1em;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+p {
+    margin: 5px 7px 5px 7px;
+}
+table, div {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.container {
+    display:inline-block;
+    text-align: left; /*left justifies the table caption*/
+    border: 2px solid gray;
+    margin: 0 0 10px 0;
+    width: 100%; /*expands tables all the way across*/
+}
+table {
+    border-spacing: 10px 5px;
+    margin: -5px auto 5px auto;
+    text-align: left;
+}
+th {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.leak {
+    margin: 10px 0;
+}
+a[id*="-"] {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+a[id*="show-"] {
+    display: none;
+}
+.footer {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+</style>
+</head>
+<body onload="start();">
+    <div class="main">
+        <div class='title'>W10D1</div>
+        <div class='subtitle'>Recon-ng Reconnaissance Report</div>
+        <div class='link'><a href='http://www.recon-ng.com' target="_blank">www.recon-ng.com</a></div>
+        <hr>
+        <div>
+<!-- START -->
+<div class="container">
+<a id="show-summary" href="javascript:showhide('summary');"><p>[+] Summary</p></a>
+<a id="hide-summary" href="javascript:showhide('summary');"><p>[-] Summary</p><hr></a>
+<table id="summary">
+<tr><th>table</th><th>count</th></tr>
+<tr><td>domains</td><td class="centered">0</td></tr>
+<tr><td>companies</td><td class="centered">0</td></tr>
+<tr><td>netblocks</td><td class="centered">0</td></tr>
+<tr><td>locations</td><td class="centered">0</td></tr>
+<tr><td>vulnerabilities</td><td class="centered">0</td></tr>
+<tr><td>ports</td><td class="centered">0</td></tr>
+<tr><td>hosts</td><td class="centered">38</td></tr>
+<tr><td>contacts</td><td class="centered">20</td></tr>
+<tr><td>credentials</td><td class="centered">0</td></tr>
+<tr><td>leaks</td><td class="centered">0</td></tr>
+<tr><td>pushpins</td><td class="centered">0</td></tr>
+<tr><td>profiles</td><td class="centered">0</td></tr>
+<tr><td>repositories</td><td class="centered">0</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-hosts" href="javascript:showhide('hosts');"><p>[+] Hosts</p></a>
+<a id="hide-hosts" href="javascript:showhide('hosts');"><p>[-] Hosts</p><hr></a>
+<table name="table" id="hosts">
+<tr><th>host</th><th>ip_address</th><th>region</th><th>country</th><th>latitude</th><th>longitude</th><th>notes</th><th>module</th></tr>
+<tr><td>admin.brandini.it</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.brandini.it</td><td>62.149.188.221</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>admin.redirect.aruba.it</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>atod-g2.tm-4.office.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autod.ms-acdc-autod.office.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.brandini.it</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.brandini.it</td><td>52.98.243.152</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.brandini.it</td><td>52.98.237.152</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.brandini.it</td><td>52.98.242.232</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.brandini.it</td><td>52.98.237.168</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>autodiscover.outlook.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.brandini.it</td><td>104.26.12.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.brandini.it</td><td>104.26.13.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cdn.brandini.it</td><td>172.67.74.154</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>console.brandini.it</td><td>172.67.74.154</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>console.brandini.it</td><td>104.26.12.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>console.brandini.it</td><td>104.26.13.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>crm.brandini.it</td><td>2.228.111.219</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>external.brandini.it</td><td>93.56.2.115</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>fax.brandini.it</td><td>92.223.159.197</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ftp.brandini.it</td><td>74.122.239.74</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ftp2.brandini.it</td><td>92.223.159.198</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>localhost.brandini.it</td><td>127.0.0.1</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketplace.brandini.it</td><td>104.26.12.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketplace.brandini.it</td><td>172.67.74.154</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>marketplace.brandini.it</td><td>104.26.13.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>old.brandini.it</td><td>94.23.73.76</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>privacy.brandini.it</td><td>2.228.111.219</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>s.brandini.it</td><td>2.228.111.219</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>shop.brandini.it</td><td>217.64.195.176</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staging.brandini.it</td><td>104.26.13.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staging.brandini.it</td><td>104.26.12.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>staging.brandini.it</td><td>172.67.74.154</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>vpn.brandini.it</td><td>92.223.159.198</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>webmail.brandini.it</td><td>92.223.159.198</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.brandini.it</td><td>172.67.74.154</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.brandini.it</td><td>104.26.13.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.brandini.it</td><td>104.26.12.174</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-contacts" href="javascript:showhide('contacts');"><p>[+] Contacts</p></a>
+<a id="hide-contacts" href="javascript:showhide('contacts');"><p>[-] Contacts</p><hr></a>
+<table name="table" id="contacts">
+<tr><th>first_name</th><th>middle_name</th><th>last_name</th><th>email</th><th>title</th><th>region</th><th>country</th><th>phone</th><th>notes</th><th>module</th></tr>
+<tr><td></td><td></td><td>Google LLC</td><td>arin-contact@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>GC Abuse</td><td>google-cloud-compliance@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Network Engineering Corp</td><td>ir-contact-netops-corp@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td></td><td></td><td>Abuse</td><td>network-abuse@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Ari</td><td></td><td>Barkan</td><td>ari@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Arturo</td><td></td><td>Servin</td><td>arturolev@google.com</td><td>Whois contact</td><td>Zurich</td><td>Switzerland</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Carl</td><td></td><td>Collier</td><td>cjac@google.com</td><td>Whois contact</td><td>Seattle, WA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Daniel</td><td></td><td>Gregory</td><td>danielgregory@google.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Dave</td><td></td><td>Schwartz</td><td>daveschwartz@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Jose</td><td></td><td>Santiago</td><td>josefsantiago@google.com</td><td>Whois contact</td><td>Austin, TX</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Juan</td><td></td><td>Narvaez</td><td>juannarvaez@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Kristina</td><td></td><td>Leech</td><td>kleech@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Louis</td><td></td><td>Lee</td><td>louiel@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Paul</td><td></td><td>Socolow</td><td>socolow@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Rob</td><td></td><td>Laird</td><td>rlaird@google.com</td><td>Whois contact</td><td>Cambridge, MA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>SATHYA</td><td></td><td>VASUDEVA</td><td>svasudeva@google.com</td><td>Whois contact</td><td>Chamblee, GA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Shawn Sr. NetEng</td><td></td><td>Higgin</td><td>shiggin@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Sunny</td><td></td><td>Bautista</td><td>inosencio@google.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Sylvie</td><td></td><td>Laperriere</td><td>svasudeva@google.com</td><td>Whois contact</td><td>Mountain View, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+<tr><td>Tom</td><td></td><td>Brownlow</td><td>brownlow@google.com</td><td>Whois contact</td><td>San Francisco, CA</td><td>United States</td><td></td><td></td><td>whois_pocs</td></tr>
+</table>
+</div><br />
+
+<!-- END -->
+        </div>
+        <hr>
+        <p class="footer">Created by: JV<br />Mon, Sep 15 2025 16:01:50</p>
+    </div>
+</body>
+</html>
